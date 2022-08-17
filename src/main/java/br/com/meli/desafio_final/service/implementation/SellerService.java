@@ -28,9 +28,6 @@ public class SellerService implements ISellerService {
      */
     @Override
     public Seller create(Seller seller) {
-        if(seller.getId() == null){
-                throw new BadRequest("O vendedor não pode ter Id definido");
-        }
         return sellerRepository.save(seller);
     }
 

@@ -3,7 +3,6 @@ package br.com.meli.desafio_final.service.implementation;
 import br.com.meli.desafio_final.dto.SellerProductCurrentQuantityDto;
 import br.com.meli.desafio_final.dto.SellerProductsDueDateDto;
 import br.com.meli.desafio_final.dto.SellerProductsSoldOutDto;
-import br.com.meli.desafio_final.exception.BadRequest;
 import br.com.meli.desafio_final.exception.NotFound;
 import br.com.meli.desafio_final.model.entity.Seller;
 import br.com.meli.desafio_final.repository.SellerRepository;
@@ -114,16 +113,6 @@ public class SellerServiceTest {
         assertThat(newSeller).isNotNull();
         assertThat(newSeller.getId()).isPositive();
         assertThat(newSeller.getName()).isEqualTo(newSeller.getName());
-    }
-
-    @Test
-    @DisplayName("Dispara uma BadRequest quando tenta criar um vendedor que já existe")
-    public void create_throwException_when_InvalidParam() {
-        Seller seller = SellerUtils.newSeller3ToSave();
-        assertThrows(BadRequest.class, () -> {
-            sellerService.create(seller);
-        });
-        verify(sellerRepository, never()).save(seller);
     }
 
     @Test
