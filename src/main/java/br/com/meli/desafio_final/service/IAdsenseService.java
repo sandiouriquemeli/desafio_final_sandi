@@ -14,4 +14,5 @@ public interface IAdsenseService {
     List<Adsense> findByCategory(Category category);
     List<AdsenseByWarehouseDto> findAdsenseByWarehouseAndQuantity(Long adsenseId);
     List<AdsenseIdDto> findByProductId(Long productId);
+    List<AdsenseDto> findAdesenseBySeller(Long id);
 }
