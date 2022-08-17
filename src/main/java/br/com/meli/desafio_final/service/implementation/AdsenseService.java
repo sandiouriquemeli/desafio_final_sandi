@@ -1,6 +1,7 @@
 package br.com.meli.desafio_final.service.implementation;
 
 import br.com.meli.desafio_final.dto.AdsenseByWarehouseDto;
+import br.com.meli.desafio_final.dto.AdsenseDto;
 import br.com.meli.desafio_final.exception.NotFound;
 import br.com.meli.desafio_final.model.entity.Adsense;
 import br.com.meli.desafio_final.model.enums.Category;
@@ -79,6 +80,17 @@ public class AdsenseService implements IAdsenseService {
     @Override
     public List<AdsenseByWarehouseDto> findAdsenseByWarehouseAndQuantity(Long adsenseId) {
         return batchService.getAdsenseByWarehouseAndQuantity(adsenseId);
+    }
+
+    /**
+     * Método que localiza todos os anúncios pelo id do vendedor
+     * @param id
+     * @return lista de anúncios
+     */
+    @Override
+    public List<AdsenseDto> findAdesenseBySeller(Long id) {
+        List<Adsense> adsenseList = findAll().stream().filter(a -> a.getSeller().getId().equals(id)).collect(Collectors.toList());
+        return AdsenseDto.convertDto(adsenseList);
     }
 
 }
