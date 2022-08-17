@@ -24,12 +24,12 @@ Essa apresentação é referente ao requisito individual.
 [Documentação](https://link-da-documentação)
 
 # ERR: 
-![diagrama](https://myoctocat.com/assets/images/DiagramaERR_Sandi.jpeg)
+![DiagramaERR_Sandi](https://user-images.githubusercontent.com/107966726/185107711-f366e110-ade2-4d01-aa85-dbb0536790d8.jpeg)
 
-User Story:
 
-Coleção de casos de teste do Postman: (Sandi-endpoints-Seller.postman_collection.json)
+# User Story:
 
+[Requisito 6 - Sandi Ourique - Documentos de Google.pdf](https://github.com/sandiouriquemeli/desafio_final_sandi/files/9359120/Requisito.6.-.Sandi.Ourique.-.Documentos.de.Google.pdf)
 
 
 ## Documentação da API
